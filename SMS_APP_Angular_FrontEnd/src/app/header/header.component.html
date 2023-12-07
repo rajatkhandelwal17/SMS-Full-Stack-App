@@ -1,0 +1,12 @@
+<header>
+    <div id="logo">{{message}}</div>
+    <nav>
+        <a *ngIf="service.isUserLoggedIn" routerLink="/home">Home</a>
+        <a *ngIf="!service.isUserLoggedIn" routerLink="/login">Login</a>
+        <a *ngIf="service.isUserLoggedIn" routerLink="/students">Students</a>
+        <a routerLink="/register">Register</a>
+        <a  routerLink="/contactus">Contact Us</a>
+        <a  routerLink="/aboutus">About Us</a>
+        <a *ngIf="service.isUserLoggedIn" routerLink="/logout">Log out</a>
+    </nav>
+</header>

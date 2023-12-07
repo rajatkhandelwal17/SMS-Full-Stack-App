@@ -1,0 +1,14 @@
+<mat-toolbar color="primary">
+  <mat-icon (click)="s.toggle()">menu</mat-icon>
+  <span> &nbsp;Student Management App </span>
+</mat-toolbar>
+
+<mat-sidenav-container>
+  <mat-sidenav #s opened="false" mode="push">
+    <app-menu (linkClicked)="toggleSidebar()"></app-menu>
+  </mat-sidenav>
+
+  <router-outlet></router-outlet>
+  <app-footer></app-footer>
+  
+</mat-sidenav-container>

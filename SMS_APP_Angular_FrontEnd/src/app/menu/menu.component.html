@@ -1,0 +1,15 @@
+<ul>
+  <li *ngIf="service.isUserLoggedIn"><a (click)="linkClicked.emit()" routerLink="/home">Home</a></li>
+  <li *ngIf="!service.isUserLoggedIn"><a (click)="linkClicked.emit()" routerLink="/login">Login</a></li>
+  <li *ngIf="service.isUserLoggedIn">
+    <a (click)="linkClicked.emit()" routerLink="/students">Students</a>
+  </li>
+  <li>
+    <a (click)="linkClicked.emit()" routerLink="/register">Register</a>
+  </li>
+  <li><a (click)="linkClicked.emit()" routerLink="/contactus">Contact Us</a></li>
+  <li><a (click)="linkClicked.emit()" routerLink="/aboutus">About Us</a></li>
+  <li *ngIf="service.isUserLoggedIn">
+    <a (click)="linkClicked.emit()" routerLink="/logout">Log out</a>
+  </li>
+</ul>

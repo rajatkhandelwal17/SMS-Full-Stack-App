@@ -1,0 +1,32 @@
+<app-sort (sortSelected)="sortStudents($event)" align="center"></app-sort><br>
+<h2 align="center">Student list:</h2>
+
+<table *ngIf="students.length>0" align="center">
+    <thead>
+        <tr>
+            <th>Roll No</th>
+            <th>Name</th>     
+            <th>Attempts</th>
+            <th>Percentage</th>
+            <th>Subjects Learning</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let s of students">
+            <td>{{s.rollno}}</td>
+            <td>{{s.name | uppercase}}</td>
+            <td>{{s.numberOfAttempts}}</td>
+            <td>{{s.percentage/100 | percent}}</td>
+            <td>                
+                <ul *ngFor="let sub of s.subjectsLearning">
+                    <li>{{sub}}</li>
+                </ul>
+            </td>
+            <td>
+                <button mat-raised-button color="warn" (click)="deleteStudent(s.rollno)">Delete</button>&nbsp;
+                <button mat-raised-button color="primary" (click)="updateStudent(s)">Update</button>
+            </td>
+        </tr>
+    </tbody>
+</table><br>

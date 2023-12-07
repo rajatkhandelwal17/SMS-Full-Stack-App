@@ -1,0 +1,17 @@
+.center-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%; 
+}
+
+form {
+  width: 100%;
+  text-align: center;
+}
+mat-form-field{
+  width: 30%;
+}
+button{
+  width: 20%;
+}

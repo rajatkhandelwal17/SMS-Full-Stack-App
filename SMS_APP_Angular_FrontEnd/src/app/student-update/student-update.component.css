@@ -1,0 +1,22 @@
+mat-form-field {
+    width: 100%;
+}  
+#card {
+    width: 100%; 
+}
+.full-width {
+    width: 100%;
+}
+input {
+    width: 50%;
+    padding: 8px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+h1{
+    text-align: center;
+}
+div{
+    align-items: center;
+    width: 500px;
+}

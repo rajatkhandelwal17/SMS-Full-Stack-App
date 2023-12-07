@@ -1,0 +1,21 @@
+mat-sidenav{
+    width: 200px;
+    padding: 20px;
+    background-color: #3f51b5;
+}
+mat-sidenav-container{
+    height: 100%;
+}
+a{
+    font-size: large;
+    color: white;
+    text-decoration: none;
+}
+li{
+    margin: 5px;
+    padding: 5px;
+}
+ul {
+    list-style-type: none;
+    padding: 0;
+}

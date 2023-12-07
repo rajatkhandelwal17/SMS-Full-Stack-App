@@ -1,0 +1,32 @@
+<br><h1>Student Updation Form</h1>
+
+<div mat-dialog-content id="card">
+  <form (ngSubmit)="onUpdateClick()" align="center">
+
+    <mat-form-field class="full-width">
+      <label for="rollNo">Roll Number:</label><br>
+      <input matInput type="number" placeholder="Enter Roll No" name="rollNo" required [(ngModel)]="data.s.rollno" readonly>
+    <br>
+
+      <label for="name">Name:</label><br>
+      <input matInput type="text" placeholder="Enter Name" name="name" required [(ngModel)]="data.s.name">
+    <br>
+
+      <label for="numberOfAttempts">Number of Attempts:</label><br>
+      <input matInput type="number" placeholder="Enter Number of Attempts" name="numberOfAttempts" required [(ngModel)]="data.s.numberOfAttempts">
+    <br>
+
+      <label for="percentage">Percentage:</label><br>
+      <input matInput type="number" placeholder="Enter Percentage" name="percentage" required [(ngModel)]="data.s.percentage">
+    <br>
+
+    <label for="subjects">Subjects Learning:</label><br>
+      <input matInput type="text" placeholder="Enter Subjects" name="subjects" required [(ngModel)]="data.s.subjectsLearning">
+    </mat-form-field>
+
+    <div>
+      <button mat-raised-button color="primary" type="submit">Update</button>&nbsp;
+      <button mat-raised-button color="warn" (click)="onCancelClick()">Cancel</button>
+    </div>
+  </form>
+</div>
